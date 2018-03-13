@@ -13,7 +13,7 @@
     ],
     "require": {
         "yiisoft/yii2": "~2.0.6",
-        "creativetimofficial/material-dashboard": "*"
+        "creativetimofficial/material-dashboard": "@dev"
     },
     "repositories": [
         {

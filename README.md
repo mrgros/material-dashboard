@@ -1,23 +1,16 @@
 <p align="center">
-    <a href="http://getbootstrap.com/" target="_blank" rel="external">
-        <img src="https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg" height="80px">
-    </a>
-    <h1 align="center">Twitter Bootstrap Extension for Yii 2</h1>
+    <h1 align="center">Material Dashboard Extension for Yii 2</h1>
     <br>
 </p>
 
-This is the Twitter Bootstrap extension for [Yii framework 2.0](http://www.yiiframework.com). It encapsulates [Bootstrap](http://getbootstrap.com/) components
-and plugins in terms of Yii widgets, and thus makes using Bootstrap components/plugins
-in Yii applications extremely easy.
+This is the Material Dashboard extension [Yii framework 2.0](http://www.yiiframework.com). Based on [Material Dashboard](https://github.com/creativetimofficial/material-dashboard)
+and [Bootstrap](http://getbootstrap.com/).
 
 For license information check the [LICENSE](LICENSE.md)-file.
 
-Documentation is at [docs/guide/README.md](docs/guide/README.md).
+## Links:
 
-[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-bootstrap/v/stable.png)](https://packagist.org/packages/yiisoft/yii2-bootstrap)
-[![Total Downloads](https://poser.pugx.org/yiisoft/yii2-bootstrap/downloads.png)](https://packagist.org/packages/yiisoft/yii2-bootstrap)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-bootstrap.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-bootstrap)
-
++ [Original theme](https://github.com/creativetimofficial/material-dashboard)
 
 Installation
 ------------
@@ -27,23 +20,46 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist yiisoft/yii2-bootstrap
+php composer.phar require --prefer-dist mrgros/material-dashboard
 ```
 
 or add
 
 ```
-"yiisoft/yii2-bootstrap": "~2.0.0"
+"creativetimofficial/material-dashboard": "@dev",
+"mrgros/material-dashboard": "@dev"
 ```
 
 to the require section of your `composer.json` file.
 
-Usage
-----
+Configure your application
 
-For example, the following
-single line of code in a view file would render a Bootstrap Progress plugin:
+```
+    'components' => [
+        'assetManager' => [
+            'bundles' => [
+                'yii\bootstrap\BootstrapPluginAsset' => [
+                    'js'=>[]
+                ],
+                'yii\bootstrap\BootstrapAsset' => [
+                    'css' => []
+                ]
+            ],
+        ],
+        //...
+    ]
+```
 
-```php
-<?= yii\bootstrap\Progress::widget(['percent' => 60, 'label' => 'test']) ?>
+And add bundle
+
+```
+    class AppAsset extends AssetBundle
+    {
+        public $basePath = '@webroot';
+        public $baseUrl = '@web';
+
+        public $depends = [
+            'yii\material\MaterialAsset',
+        ];
+    }
 ```
