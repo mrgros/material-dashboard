@@ -1,0 +1,45 @@
+{
+    "name": "mrgros/material-dashboard",
+    "description": "Material Dashboard - Free Bootstrap Material Design Admin",
+    "keywords": ["yii2", "bootstrap", "material-dashboard"],
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2-bootstrap/issues",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2-bootstrap"
+    },
+    "authors": [
+        {
+            "name": "Konstantin Prokhorov",
+            "email": "salem.kde@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.6",
+        "bower-asset/bootstrap": "3.3.* | 3.2.* | 3.1.*",
+        "creativetimofficial/material-dashboard": "@dev"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:creativetimofficial/material-dashboard.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "yii\\material\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    }
+}
