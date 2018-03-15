@@ -10,10 +10,9 @@ namespace yii\material;
 use yii\web\AssetBundle;
 
 /**
- * Asset bundle for the Twitter bootstrap css files.
+ * Asset bundle for the material dashboard css files.
  *
- * @author Qiang Xue <qiang.xue@gmail.com>
- * @since 2.0
+ * @author Konstantin Prokhorov <salem.kde@gmail.com>
  */
 class MaterialAsset extends AssetBundle
 {
